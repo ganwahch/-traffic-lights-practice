@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>traffic lights</title>
+</head>
+<body>
+    <div class = "container">    
+        <div id="red" class = "color red"></div>
+             <div id="yellow" class = "color yellow"></div>
+         <div id="green" class = "color green"></div>    
+             </div>
+             <div class="place-btns">
+         <button onclick="clRed()" class="btn" id="red-btn">Stop</button> 
+         <button onclick="clYellow()" class="btn" id="yellow-btn">Get ready</button> 
+          <button onclick="clGreen()" class="btn" id="green-btn">Go</button>  
+          </div>
+          <style>
+              body{
+    background-color:black;
+    display:flex; 
+    flex-direction:column;
+    align-items:center ;
+}
+.container{
+    height:276px;
+    width:92px;
+    border:1px solid grey;
+    margin-top:5px;
+    border-radius:7px;
+}
+
+.color{
+    height:90px;
+    width:90px;
+    border:1px solid grey;
+    border-radius:50%;
+}
+.red{
+background-color:rgba(255,0,0,0.2);    
+}
+.yellow{
+background-color:rgba(255,255,0,0.2);    
+}
+.green{
+background-color:rgba(0,255,0,0.2);    
+}
+
+.place-btns{
+    margin-top:9px;
+}
+.btn{
+    padding:7px;
+    border-radius:6px;
+}
+          </style>
+
+          <script>
+              function clRed (){
+    document.getElementById("red").style.background="red";
+    document.getElementById("yellow").style.background="rgba(255,255,0,0.2)";
+    document.getElementById("green").style.background="rgba(0,255,0,0.2)";
+}
+
+function clYellow (){
+    document.getElementById("yellow").style.background="yellow";
+     document.getElementById("red").style.background="rgba(255,0,0,0.2)";
+     document.getElementById("green").style.background="rgba(0,255,0,0.2)";
+}
+
+function clGreen (){
+    document.getElementById("green").style.background="lime";
+  document.getElementById("red").style.background="rgba(255,0,0,0.2)"; 
+  document.getElementById("yellow").style.background="rgba(255,255,0,0.2)";  
+}
+          </script>
+    
+</body>
+</html>
